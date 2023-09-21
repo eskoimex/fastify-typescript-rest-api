@@ -1,0 +1,58 @@
+{
+  "name": "fastify-prisma-typescript-rest-api",
+  "version": "0.0.1",
+  "description": "Rest APIs, using Fastify, PrimsaJS and TypeScript. Providing OpenAPI/ SwaggerUI for docs.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "debug": "nodemon --inspect=0.0.0.0:9229 src/index.ts",
+    "docker:dev": "nodemon src/index.ts",
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/"
+  },
+  "keywords": [
+    "node",
+    "fastify",
+    "prisma",
+    "typescript",
+    "swagger",
+    "jest",
+    "javascript"
+  ],
+  "author": "Ime Samuel",
+  "license": "MIT",
+  "homepage": "https://github.com/",
+  "dependencies": {
+    "@fastify/compress": "^6.2.1",
+    "@fastify/cors": "^8.2.1",
+    "@fastify/env": "^4.2.0",
+    "@fastify/helmet": "^10.1.0",
+    "@fastify/swagger": "^8.3.1",
+    "@fastify/swagger-ui": "^1.9.3",
+    "@prisma/client": "^4.12.0",
+    "dotenv": "^16.0.3",
+    "fastify": "^4.15.0",
+    "joi": "^17.10.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/jest": "^29.5.5",
+    "@types/node": "^18.15.11",
+    "@types/supertest": "^2.0.12",
+    "fastify-tsconfig": "^1.0.1",
+    "jest": "^29.7.0",
+    "nodemon": "^2.0.22",
+    "pino-pretty": "^10.0.0",
+    "prisma": "^4.12.0",
+    "supertest": "^6.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  }
+}
